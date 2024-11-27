@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animal Table Management</title>
+    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         /* Custom CSS for image hover effect */
@@ -19,18 +20,6 @@
             transform: scale(1.5);
             cursor: pointer;
         }
-
-        /* Bold text in Table 2 */
-        .bold-text {
-            font-weight: bold;
-        }
-
-        /* Bold, Italic and Blue text in Table 3 */
-        .styled-text {
-            font-weight: bold;
-            font-style: italic;
-            color: blue;
-        }
     </style>
 </head>
 <body>
@@ -38,48 +27,124 @@
 <div class="container mt-5">
     <h2>Animal Tables</h2>
 
-    <!-- Big Cats Table (Table 1) -->
-    <h3>Big Cats (Sortable)</h3>
+    <!-- Big Cats Table -->
+    <h3> Table: 1 Big Cats</h3>
     <table id="bigCatsTable" class="table table-bordered">
         <thead>
             <tr>
-                <th onclick="sortTable(0, 'bigCatsTable')">Name</th>
-                <th onclick="sortTable(1, 'bigCatsTable')">Location</th>
+                <th>Name</th>
                 <th>Image</th>
                 <th>Actions</th>
+                <th> Location</th>
             </tr>
         </thead>
-        <tbody id="bigCatsTableBody"></tbody>
+        <tbody id="bigCatsTableBody">
+            <!-- Data will be inserted here dynamically -->
+            <tr>
+                <td> "Big Cats"</td>
+                <td> "Lion" </td>
+                <td> <button class="btn btn-primary" data-toggle="modal"> Edit </button> <button class="btn btn-primary" data-toggle="modal"> Delete</button> </td>
+
+                <td> Africa </td>
+                 </tr>
+                 <tr>
+                    <td> "Big Cats"</td>
+                    <td> "Tiger" </td>
+                    <td> <button class="btn btn-primary" data-toggle="modal"> Edit </button> <button class="btn btn-primary" data-toggle="modal"> Delete</button> </td>
+
+                    <td> Asia </td>
+                     </tr>
+                     <tr>
+                        <td> "Big Cats"</td>
+                        <td> "Leopard" </td>
+                                        <td> <button class="btn btn-primary" data-toggle="modal"> Edit </button> <button class="btn btn-primary" data-toggle="modal"> Delete</button> </td>
+
+                        <td> Africa and Asia</td>
+                         </tr>
+        </tbody>
     </table>
     <button class="btn btn-primary" data-toggle="modal" data-target="#addBigCatModal">Add Big Cat</button>
 
-    <!-- Dogs Table (Table 2) -->
-    <h3 class="mt-5">Dogs (Sortable by Name and Location)</h3>
+    <!-- Dogs Table -->
+    <h3 class="mt-5">Table: 2 Dogs</h3>
     <table id="dogsTable" class="table table-bordered">
         <thead>
             <tr>
-                <th onclick="sortTable(0, 'dogsTable')">Name</th>
-                <th onclick="sortTable(1, 'dogsTable')">Location</th>
+                <th>Name</th>
                 <th>Image</th>
                 <th>Actions</th>
+                <th>Location </th>
             </tr>
         </thead>
-        <tbody id="dogsTableBody"></tbody>
+        <tbody id="dogsTableBody">
+            <!-- Data will be inserted here dynamically -->
+            <tr>
+                <td> "Dog"</td>
+                <td> Rotwailer </td>
+                <td> <button class="btn btn-primary" data-toggle="modal"> Edit </button> <button class="btn btn-primary" data-toggle="modal"> Delete</button> </td>
+                <td> Germany </td>
+                 </tr>
+                 <tr>
+                    <td> "Dog"</td>
+                    <td> German Shephard </td>
+                    <td> <button class="btn btn-primary" data-toggle="modal"> Edit </button> <button class="btn btn-primary" data-toggle="modal"> Delete</button> </td>
+
+                    <td> Germany</td>
+                     </tr>
+                     <tr>
+                        <td> "Dog"</td>
+                        <td> "Labrodar" </td>
+                        <td> <button class="btn btn-primary" data-toggle="modal"> Edit </button> <button class="btn btn-primary" data-toggle="modal"> Delete</button> </td>
+
+                        <td> UK </td>
+                         </tr>
+                         <tr>
+                            <td> "Dog"</td>
+                            <td> "Alabai" </td>
+                            <td> <button class="btn btn-primary" data-toggle="modal"> Edit </button> <button class="btn btn-primary" data-toggle="modal"> Delete</button> </td>
+
+                            <td> Turkey </td>
+                             </tr>
+        </tbody>
     </table>
     <button class="btn btn-primary" data-toggle="modal" data-target="#addDogModal">Add Dog</button>
 
-    <!-- Big Fishes Table (Table 3) -->
-    <h3 class="mt-5">Big Fishes (Sortable by Size)</h3>
+    <!-- Big Fishes Table -->
+    <h3 class="mt-5">Table: 3 Big Fishes</h3>
     <table id="bigFishesTable" class="table table-bordered">
         <thead>
             <tr>
-                <th onclick="sortTable(0, 'bigFishesTable')">Name</th>
-                <th onclick="sortTable(1, 'bigFishesTable')">Size</th>
+                <th>Name</th>
                 <th>Image</th>
                 <th>Actions</th>
+                <th>Location </th>
             </tr>
         </thead>
-        <tbody id="bigFishesTableBody"></tbody>
+        <tbody id="bigFishesTableBody">
+            <!-- Data will be inserted here dynamically -->
+            <tr>
+                <td> "Big Fish"</td>
+                <td> "Killer Whale" </td>
+                <td> <button class="btn btn-primary" data-toggle="modal"> Edit </button> <button class="btn btn-primary" data-toggle="modal"> Delete</button> </td>
+
+                <td> Atlantic Ocean</td>
+                 </tr>
+                 <tr>
+                    <td> "Big Cats"</td>
+                    <td> "Tiger Shark" </td>
+                    <td> <button class="btn btn-primary" data-toggle="modal"> Edit </button> <button class="btn btn-primary" data-toggle="modal"> Delete</button> </td>
+
+                    <td> Pacific Ocean </td>
+                     </tr>
+                     <tr>
+                        <td> "Big Cats"</td>
+                        <td> "Hammerheard Shark" </td>
+                        <td> <button class="btn btn-primary" data-toggle="modal"> Edit </button> <button class="btn btn-primary" data-toggle="modal"> Delete</button> </td>
+
+                        <td> Ocean </td>
+                         </tr>
+            
+        </tbody>
     </table>
     <button class="btn btn-primary" data-toggle="modal" data-target="#addBigFishModal">Add Big Fish</button>
 
@@ -96,7 +161,6 @@
                 </div>
                 <div class="modal-body">
                     <input type="text" id="bigCatName" class="form-control" placeholder="Enter Big Cat Name">
-                    <input type="text" id="bigCatLocation" class="form-control mt-2" placeholder="Enter Location">
                     <input type="text" id="bigCatImage" class="form-control mt-2" placeholder="Enter Image URL">
                 </div>
                 <div class="modal-footer">
@@ -119,7 +183,6 @@
                 </div>
                 <div class="modal-body">
                     <input type="text" id="dogName" class="form-control" placeholder="Enter Dog Name">
-                    <input type="text" id="dogLocation" class="form-control mt-2" placeholder="Enter Location">
                     <input type="text" id="dogImage" class="form-control mt-2" placeholder="Enter Image URL">
                 </div>
                 <div class="modal-footer">
@@ -142,7 +205,6 @@
                 </div>
                 <div class="modal-body">
                     <input type="text" id="bigFishName" class="form-control" placeholder="Enter Big Fish Name">
-                    <input type="text" id="bigFishSize" class="form-control mt-2" placeholder="Enter Size">
                     <input type="text" id="bigFishImage" class="form-control mt-2" placeholder="Enter Image URL">
                 </div>
                 <div class="modal-footer">
@@ -162,4 +224,3 @@
 
 </body>
 </html>
-
