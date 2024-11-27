@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Table Management</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for image hover effect */
+        .animal-image {
+            width: 150px;
+            height: 150px;
+            border: 2px solid #ccc;
+            padding: 5px;
+            transition: transform 0.3s;
+        }
+
+        .animal-image:hover {
+            transform: scale(1.5);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Animal Tables</h2>
+
+    <!-- Big Cats Table -->
+    <h3>Big Cats</h3>
+    <table id="bigCatsTable" class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="bigCatsTableBody">
+            <!-- Data will be inserted here dynamically -->
+        </tbody>
+    </table>
+    <button class="btn btn-primary" data-toggle="modal" data-target="#addBigCatModal">Add Big Cat</button>
+
+    <!-- Dogs Table -->
+    <h3 class="mt-5">Dogs</h3>
+    <table id="dogsTable" class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="dogsTableBody">
+            <!-- Data will be inserted here dynamically -->
+        </tbody>
+    </table>
+    <button class="btn btn-primary" data-toggle="modal" data-target="#addDogModal">Add Dog</button>
+
+    <!-- Big Fishes Table -->
+    <h3 class="mt-5">Big Fishes</h3>
+    <table id="bigFishesTable" class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="bigFishesTableBody">
+            <!-- Data will be inserted here dynamically -->
+        </tbody>
+    </table>
+    <button class="btn btn-primary" data-toggle="modal" data-target="#addBigFishModal">Add Big Fish</button>
+
+    <!-- Modals for Adding Animals -->
+    <!-- Add Big Cat Modal -->
+    <div class="modal fade" id="addBigCatModal" tabindex="-1" role="dialog" aria-labelledby="addBigCatModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addBigCatModalLabel">Add Big Cat</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="bigCatName" class="form-control" placeholder="Enter Big Cat Name">
+                    <input type="text" id="bigCatImage" class="form-control mt-2" placeholder="Enter Image URL">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="addBigCat()">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Dog Modal -->
+    <div class="modal fade" id="addDogModal" tabindex="-1" role="dialog" aria-labelledby="addDogModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addDogModalLabel">Add Dog</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="dogName" class="form-control" placeholder="Enter Dog Name">
+                    <input type="text" id="dogImage" class="form-control mt-2" placeholder="Enter Image URL">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="addDog()">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Big Fish Modal -->
+    <div class="modal fade" id="addBigFishModal" tabindex="-1" role="dialog" aria-labelledby="addBigFishModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addBigFishModalLabel">Add Big Fish</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="bigFishName" class="form-control" placeholder="Enter Big Fish Name">
+                    <input type="text" id="bigFishImage" class="form-control mt-2" placeholder="Enter Image URL">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="addBigFish()">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS & jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
