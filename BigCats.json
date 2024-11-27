@@ -1,0 +1,40 @@
+
+  "BigCats" : {
+    {
+        "Species": "Big Cats",
+        "name": "Tiger",
+        "size": 10ft,
+        "location": "Asia"
+    },
+    { 
+        "Species": "Big Cats",
+        "name": "Lion",
+        "size": 8ft,
+        "location": :"Africa"
+    },
+    {
+        "Species": "Big Cats",
+        "name": "Leopard",
+        "size": 5ft,
+        "location": :"Africa and Asia"
+    },
+    {
+        "Species": "Big Cats",
+        "name": "Cheetah",
+        "size": 5ft,
+        "location": :"Africa"
+    },
+    {
+        "Species": "Big Cats",
+        "name": "Caracal",
+        "size": 3ft,
+        "location": :"Africa"
+    },
+    {
+        "Species": "Big Cats",
+        "name": "Jaguar",
+        "size": 5ft,
+        "location": :"Amazon"
+    }
+
+  }  
