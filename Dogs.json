@@ -1,0 +1,26 @@
+"Dogs" :{
+    {
+      "Species": "Dog",
+      "Name": "Rotwailer",
+      "size": "2ft",
+      "location": "Germany"
+    },
+    {
+        "Species": "Dog",
+        "Name": "German Shephard",
+        "size": "2ft",
+        "location": "Germany"   
+    },
+    {
+        "Species": "Dog",
+        "Name": "Labrodar",
+        "size": "2ft",
+        "location": "UK"   
+    },
+    {
+        "Species": "Dog",
+        "Name": "Alabai",
+        "size": "2ft",
+        "location": "Turkey"
+    }
+}
